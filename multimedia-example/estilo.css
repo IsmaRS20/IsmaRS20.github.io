@@ -36,8 +36,8 @@ header {
 }
 
 header img {
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 200px;
     border-radius: 15px;
     margin-right: 25px;
     text-shadow: 7px 7px 1px rgba(0, 0, 0, .5);
@@ -45,8 +45,8 @@ header img {
 }
 
 header img:hover {
-    transform: rotate(360deg);
-    border-radius: 50%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px var(--color-4);
 }
 
 header h1 {
