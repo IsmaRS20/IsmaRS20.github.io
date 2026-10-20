@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 08 - Calendario 26</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding: 120px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-image: url(img/fondo.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        main {
+            padding-bottom: 200px;
+            background-color: rgba(0, 0, 0, .25);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 4rem;
+            padding: 2rem;
+            background-color: darkcyan;
+            color: white;
+        }
+
+        .navegacion {
+            background-color: rgba(0, 0, 0, .5);
+            backdrop-filter: blur(2px);
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, .25);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            margin: 9px;
+            width: 240px;
+            background-color: rgba(0, 0, 0, .5);
+            text-align: center;
+            display: block;
+            border-radius: 50px;
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, .5);
+            transition: transform 0.2s ease
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            box-shadow: inset 0 0 20px rgb(119, 255, 198);
+            transform: scale(1.05);
+        }
+
+        a:hover {
+            color: rgb(119, 255, 198);
+            text-shadow: 0 0 5px rgb(119, 255, 198);
+        }
+
+        img {
+            width: 160px;
+            height: 288px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border-collapse: collapse;
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, .75);
+            font-size: 1.5rem;
+            color: white;
+            border-radius: 10px;
+        }
+
+        table {
+            margin-top: 3rem;
+            border-radius: 10px;
+            width: 580px;
+            height: 360px;
+        }
+
+        table:hover {
+            box-shadow: 0 0 20px rgb(119, 255, 198);
+            border-radius: 10px;
+            background-color: rgba(119, 255, 198, 0.25);
+            transform: scale(1.05);
+        }
+
+        td:hover {
+            background-color: rgb(216, 216, 216);
+            color: black;
+            font-weight: bold;
+            transform: scale(1.1);
+        }
+
+        tr:hover {
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        th:hover {
+            background-color: darkcyan;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        td.dias {
+            font-weight: bold;
+        }
+
+        td.domingo {
+            color: gold;
+            font-weight: bold;
+        }
+
+        td.domingo:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        th,
+        td {
+            width: 60px;
+            height: 36px;
+        }
+
+        td {
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 10px;
+        }
+
+        th {
+            width: 580px;
+            height: 72px;
+        }
+
+        .cabecera {
+            font-size: 2rem;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .empty {
+            background-color: rgba(0, 0, 0, .25);
+        }
+
+        td.empty:hover {
+            background-color: rgb(87, 87, 87);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <HEADER>
+            <H1>Calendario 2026</H1>
+        </HEADER>
+        <MAIN>
+            <NAV class="navegacion">
+                <UL>
+                    <LI><A href="#grupo-1">Enero - Febrero</A></LI>
+                    <LI><A href="#grupo-2">Marzo - Abril</A></LI>
+                    <LI><A href="#grupo-3">Mayo - Junio</A></LI>
+                    <LI><A href="#grupo-4">Julio - Agosto</A></LI>
+                    <LI><A href="#grupo-5">Septiembre - Octubre</A></LI>
+                    <LI><A href="#grupo-6">Noviembre - Diciembre</A></LI>
+                </UL>
+            </NAV>
+            <SECTION id="grupo-1">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">ENERO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8" class="imagen"><img src="img/enero.jpg" alt="Enero"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="domingo">4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td class="domingo">11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td class="domingo">18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td class="domingo">25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">FEBRERO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/febrero.avif" alt="Febrero"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="domingo">1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td class="domingo">8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="domingo">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td class="domingo">22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+            <SECTION id="grupo-2">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">MARZO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/marzo.jpg" alt="Marzo"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="domingo">1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td class="domingo">8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="domingo">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td class="domingo">22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td class="domingo">29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">ABRIL</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/abril.jpg" alt="Abril"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td class="domingo">5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td class="domingo">12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td class="domingo">19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td class="domingo">26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+            <SECTION id="grupo-3">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">MAYO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/mayo.jpg" alt="Mayo"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="domingo">3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td class="domingo">10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td class="domingo">17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td class="domingo">24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="domingo">31</td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">JUNIO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/junio.jpg" alt="Junio"></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td class="domingo">7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td class="domingo">14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td class="domingo">21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td class="domingo">28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+            <SECTION id="grupo-4">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">JULIO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/julio.jpg" alt="Julio"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td class="domingo">5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td class="domingo">12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td class="domingo">19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td class="domingo">26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">AGOSTO</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/agosto.jpg" alt="Agosto"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td class="domingo">2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td class="domingo">9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td class="domingo">16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="domingo">23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+            <SECTION id="grupo-5">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">SEPTIEMBRE</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/septiembre.jpg" alt="Septiembre"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td class="domingo">6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td class="domingo">13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td class="domingo">20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td class="domingo">27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">OCTUBRE</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/octubre.jpg" alt="Octubre"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="domingo">4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td class="domingo">11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td class="domingo">18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td class="domingo">25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+            <SECTION id="grupo-6">
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">NOVIEMBRE</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/noviembre.jpg" alt="Noviembre"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="domingo">1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td class="domingo">8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="domingo">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td class="domingo">22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td class="domingo">29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+                <ARTICLE>
+                    <TABLE>
+                        <tr>
+                            <th colspan="8">DICIEMBRE</th>
+                        </tr>
+                        <tr>
+                            <td class="dias">L</td>
+                            <td class="dias">M</td>
+                            <td class="dias">X</td>
+                            <td class="dias">J</td>
+                            <td class="dias">V</td>
+                            <td class="dias">S</td>
+                            <td class="domingo">D</td>
+                            <td rowspan="8"><img src="img/diciembre.jpg" alt="Diciembre"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td class="domingo">6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td class="domingo">13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td class="domingo">20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td class="domingo">27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </TABLE>
+                </ARTICLE>
+            </SECTION>
+        </MAIN>
+    </div>
+</body>
+
+</html>

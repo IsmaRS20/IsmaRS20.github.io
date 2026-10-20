@@ -51,7 +51,7 @@
             background-color: var(--btn-bg);
             color: var(--btn-text);
             border: 2px solid var(--secondary-color);
-            border-radius: 20px;
+            border-radius: 10px;
             padding: 8px 16px;
             font-size: 0.9rem;
             font-weight: bold;
@@ -64,7 +64,8 @@
         }
 
         .theme-toggle-btn:hover {
-            transform: scale(1.05);
+            background-color: var(--btn-text);
+            color: var(--btn-bg);
         }
 
         .header {
@@ -156,7 +157,7 @@
             border-radius: 10px;
         }
 
-                .sk-js dt,
+        .sk-js dt,
         .sk-js dd {
             border-left: 4px solid rgb(252, 214, 0);
             border-radius: 10px;
@@ -213,10 +214,6 @@
             padding: 10px;
         }
 
-        .project-hangman {
-            margin-bottom: 20px;
-        }
-
         .project-links a {
             text-decoration: none;
             background-color: var(--secondary-color);
@@ -240,13 +237,29 @@
         }
 
         @media (min-width: 1550px) {
+            .container {
+                margin: 0 10rem;
+                background-color: var(--bg-color);
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+            }
+
             .main {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(6, 1fr);
             }
 
             .about-me {
-                grid-column: 1 / 4;
+                grid-column: 1 / 7;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .skills {
+                            margin-top: 1rem;
+            }
+            .about-me p {
+                width: 50%;
+                margin: 0 auto;
             }
 
             .about-me p {
@@ -255,6 +268,7 @@
 
             .skills-dl {
                 display: initial;
+                grid-column: 1 / 2;
             }
 
             .sk-html,
@@ -265,11 +279,27 @@
             }
 
             .projects {
-                grid-column: 2 / 4;
+                grid-column: 2 / 7;
+            }
+
+            .project-boxes {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .project-flex {
+                width: 45%;
+                height: 200px;
+                margin: 1rem;
+                
+            }
+            
+            .card-content {
+                height: 160px;
             }
 
             .footer {
-                grid-column: 1 / 4;
+                grid-column: 1 / 7;
             }
         }
     </style>
@@ -296,7 +326,7 @@
                     lenguajes para dedicarme a la profesión en el futuro.</p>
             </section>
             <section class="skills">
-                <h2>Habilidades de Desarrollo Web</h2>
+                <h2>Habilidades</h2>
                 <dl class="skills-dl">
                     <div class="sk-html">
                         <dt>HTML</dt>
@@ -316,7 +346,7 @@
             <section class="projects">
                 <h2>Proyectos realizados destacados</h2>
                 <div class="project-boxes">
-                    <div class="project-hangman">
+                    <div class="project-flex">
                         <h3>Juego de Ahorcado</h3>
                         <div class="card-content">
                             <p>Un ejercicio básico de adivinanza de palabras, con animaciones básicas y funcionalidad
@@ -329,7 +359,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-website">
+                    <div class="project-flex">
                         <h3>Página Web Completa</h3>
                         <div class="card-content">
                             <p>El resultado de un exámen realizado en 4h que requería la realización de una página Web
@@ -339,6 +369,27 @@
                                 <a href="https://github.com/IsmaRS20/Portfolio/tree/main/finished-web-example"
                                     target="_blank">Código GitHub</a>
                                 <a href=".\finished-web-example\index.html" target="_blank">Ver Página</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-flex">
+                        <h3>Calendario 2026</h3>
+                        <div class="card-content">
+                            <p>Un calendario completo con efectos interactivos.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/IsmaRS20/Portfolio/tree/main/calendar-example"
+                                    target="_blank">Código GitHub</a>
+                                <a href=".\calendar-example\index.html" target="_blank">Ver Página</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-flex">
+                        <h3>Repositorio Multimedia</h3>
+                        <div class="card-content">
+                            <p>Una página web con un repositorio de gustos personales en distintos medios.</p>
+                            <div class="project-links">
+                                <a href="" target="_blank">Código GitHub</a>
+                                <a href="" target="_blank">Ver Página</a>
                             </div>
                         </div>
                     </div>
