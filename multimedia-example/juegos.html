@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Películas</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/27879825a4.js" crossorigin="anonymous"></script>
+    <style>
+        article {
+            margin: 1rem;
+            text-align: center;
+            background-color: var(--color-nav);
+            width: 400px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+        }
+
+        article h3 {
+            background-color: var(--color-1);
+            border-radius: 10px 10px 0 0;
+            padding: 2rem;
+            font-size: 2rem;
+            height: 200px;
+        }
+
+        article ul {
+            list-style: none;
+        }
+
+        article img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .datos {
+            padding: 1rem;
+        }
+
+        .comentarios {
+            height: 220px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="contenedor">
+            <header>
+                <img src="imgs/foto_principal.gif" alt="Icon">
+                <div class="titulo">
+                    <h1>MI BIBLIOTECA</h1>
+                    <h2>JUEGOS</h2>
+                </div>
+            </header>
+            <main>
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                        <li><a href="peliculas.html"><i class="fa-solid fa-clapperboard"></i> PELÍCULAS</a></li>
+                        <li><a href="#"><i class="fa-solid fa-gamepad"></i> JUEGOS</a></li>
+                        <li><a href="musica.html"><i class="fa-solid fa-music"></i> DISCOS</a></li>
+                    </ul>
+                </nav>
+                <div id="cuerpo">
+                    <h2>Mis Juegos Favoritos</h2>
+                    <section class="bloques">
+                        <article id="eldenring">
+                            <h3>Elden Ring</h3>
+                            <img src="imgs/juegos/elden.webp" alt="Portada de Elden Ring">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Desarrolladora: FromSoftware</li>
+                                <li>Año: 2022</li>
+                                <li>Género: Acción, RPG, Mundo Abierto</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Trata sobre un guerrero exiliado que debe explorar un vasto mundo abierto para cazar
+                                    semidioses, reunir los fragmentos de un anillo roto y convertirse en el nuevo rey
+                                </p>
+                                <p>Elden Ring ganó el premio a Juego del Año en 2022, destacando en The Game Awards, los
+                                    premios DICE y los Game Developers Choice Awards. El título de FromSoftware rompió
+                                    récords históricos con más de 300 galardones globales.</p>
+                            </div>
+                            <a href="https://store.steampowered.com/app/1245620/ELDEN_RING/?l=spanish"
+                                target="_blank"><i class="fa-brands fa-steam"></i> Página de Steam</a>
+                        </article>
+                        <article id="outerwilds">
+                            <h3>Outer Wilds</h3>
+                            <img src="imgs/juegos/outerwilds.jpg" alt="Portada de Outer Wilds">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Desarrolladora: Mobious Digital</li>
+                                <li>Año: 2019</li>
+                                <li>Genero: Aventura, Misterio, Mundo Abierto</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Outer Wilds, nombrado juego del año 2019 por Giant Bomb, Polygon, Eurogamer y The
+                                    Guardian, es un galardonado título de mundo abierto, que se desarrolla en un
+                                    enigmático sistema solar confinado.</p>
+                                <p>Equipado con una herramienta de traducción, el protagonista deberá resolver los
+                                    misterios de una antigua civilización extinguida que vino al sistema solar en busca
+                                    de una señal misteriosa.</p>
+                            </div>
+                            <a href="https://store.steampowered.com/app/753640/Outer_Wilds/?l=spanish"
+                                target="_blank"><i class="fa-brands fa-steam"></i> Página de Steam</a>
+                        </article>
+                        <article id="counterstrike">
+                            <h3>Counter Strike 2</h3>
+                            <img src="imgs/juegos/counter.jpg" alt="Portada de Counter Strike">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Desarrolladora: Valve</li>
+                                <li>Año: 1999</li>
+                                <li>Género: FPS, Online Competitivo</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Counter-Strike 2 es un videojuego de disparos táctico en primera persona gratuito
+                                    desarrollado por Valve, lanzado el 27 de septiembre de 2023 como una actualización
+                                    total y sustitución de Counter-Strike: Global Offensive</p>
+                                <p>En sus partidas, dos equipos se enfrentan en rondas: los Terroristas buscan plantar
+                                    una bomba o retener rehenes, mientras que los Antiterroristas deben evitarlo y
+                                    defender las zonas.</p>
+                            </div>
+                            <a href="https://store.steampowered.com/app/730/CounterStrike_2/?l=spanish"
+                                target="_blank"><i class="fa-brands fa-steam"></i> Página de Steam</a>
+                        </article>
+                        <article id="blueprince">
+                            <h3>Blue Prince</h3>
+                            <img src="imgs/juegos/blueprince.jpg" alt="Portada de Blue Prince">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Desarrolladora: Dogubomb</li>
+                                <li>Año: 2025</li>
+                                <li>Género: Aventura, Puzles</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Blue Prince es un juego de estrategia, puzles y aventuras con elementos roguelike. En
+                                    este título, exploras una misteriosa mansión llamada Monte Holly cuyas habitaciones
+                                    cambian y se diseñan de forma aleatoria cada día.</p>
+                                <p>El protagonista, Simon P. Jones, es el heredero de esta mansión, bajo la condición de
+                                    encontrar la oculta habitación número 46 en una mansión de 45 habitaciones.</p>
+                            </div>
+                            <a href="https://store.steampowered.com/app/1569580/Blue_Prince/?l=spanish"
+                                target="_blank"><i class="fa-brands fa-steam"></i> Página de Steam</a></a>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <div class="divisor"></div>
+            <footer>
+                <p>Contacto: isma.rs1220@gmail.com</p>
+                <ul>
+                    <li><a href="https://i.pinimg.com/originals/2a/97/20/2a972054847bc3f0412083ac13871873.gif"
+                            target="_blank">Privacidad</a></li>
+                    <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLH1w2yPHIqXSCAJpKQXMcVyOv2pHtEkdQ2xjZLeH14DNVmqESwIsExRE&s=10"
+                            target="_blank">Uso Legal</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Discos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/27879825a4.js" crossorigin="anonymous"></script>
+    <style>
+        article {
+            margin: 1rem;
+            text-align: center;
+            background-color: var(--color-nav);
+            width: 400px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+        }
+
+        article h3 {
+            background-color: var(--color-1);
+            border-radius: 10px 10px 0 0;
+            padding: 2rem;
+            font-size: 2rem;
+            height: 200px;
+        }
+
+        article ul {
+            list-style: none;
+        }
+
+        article img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .datos,
+        .canciones {
+            padding: 1rem;
+        }
+
+        .canciones {
+            height: 300px;
+        }
+
+        .comentarios {
+            height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="contenedor">
+            <header>
+                <img src="imgs/foto_principal.gif" alt="Icon">
+                <div class="titulo">
+                    <h1>MI BIBLIOTECA</h1>
+                    <h2>DISCOS</h2>
+                </div>
+            </header>
+            <main>
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                        <li><a href="peliculas.html"><i class="fa-solid fa-clapperboard"></i> PELÍCULAS</a></li>
+                        <li><a href="juegos.html"><i class="fa-solid fa-gamepad"></i> JUEGOS</a></li>
+                        <li><a href="#"><i class="fa-solid fa-music"></i> DISCOS</a></li>
+                    </ul>
+                </nav>
+                <div id="cuerpo">
+                    <h2>Mis Discos Favoritos</h2>
+                    <section class="bloques">
+                        <article id="erra">
+                            <h3>Silence Outlives the Earth</h3>
+                            <img src="imgs/discos/erra.jpg" alt="Portada de Silence Outlives the Earth">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Artista: ERRA</li>
+                                <li>Año: 2026</li>
+                                <li>Género: Metalcore Progresivo</li>
+                            </ul>
+                            <h4>Canciones</h4>
+                            <ul class="canciones">
+                                <li>Stelliform</li>
+                                <li>Further Eden</li>
+                                <li>Gore of Being</li>
+                                <li>Black Cloud</li>
+                                <li>Cicada Siren</li>
+                                <li>Echo Sonata</li>
+                                <li>Lucid Threshold</li>
+                                <li>Spiral (Of Liminal Infinity)</li>
+                                <li>I. The Many Names of God</li>
+                                <li>II. In the Gut of the Wolf</li>
+                                <li>III. Twilight in the Reflection of Dreams</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Es el séptimo álbum de estudio de la banda estadounidense de metalcore
+                                    progresivo ERRA.</p>
+                                <p>El disco destaca por su equilibrio entre pasajes melódicos etéreos,
+                                    una producción moderna y contundente, y letras de tono oscuro y reflexivo sobre el
+                                    duelo.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=bkc2KGijZgo&list=RDbkc2KGijZgo&start_radio=1"
+                                target="_blank"><i class="fa-solid fa-volume"></i> Escúchalo</a>
+                        </article>
+                        <article id="sleeptoken">
+                            <h3>Take Me Back to Eden</h3>
+                            <img src="imgs/discos/sleeptoken.jpg" alt="Portada de Take Me Back To Eden">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Artista: Sleep Token</li>
+                                <li>Año: 2023</li>
+                                <li>Género: Metalcore Progresivo</li>
+                            </ul>
+                            <h4>Canciones</h4>
+                            <ul class="canciones">
+                                <li>Chokehold</li>
+                                <li>The Summoning</li>
+                                <li>Granite</li>
+                                <li>Aqua Regia</li>
+                                <li>Vore</li>
+                                <li>Ascensionism</li>
+                                <li>Are You Really Okay?</li>
+                                <li>The Apparition</li>
+                                <li>DYWTYLM</li>
+                                <li>Rain</li>
+                                <li>Take Me Back To Eden</li>
+                                <li>Euclid</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Es un disco de metal alternativo y progresivo publicado en mayo de 2023.</p>
+                                <p>Mezcla géneros como el pop, R&B, djent y electrónica, generando opiniones divididas
+                                    entre la genialidad y el exceso comercial.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=vFHBOKa_ZG0&list=RDvFHBOKa_ZG0&start_radio=1"
+                                target="_blank"><i class="fa-solid fa-volume"></i> Escúchalo</a>
+                        </article>
+                        <article id="architects">
+                            <h3>The Sky, The Earth & All Between</h3>
+                            <img src="imgs/discos/architects.jpg" alt="Portada de The Sky, The Earth & All Between">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Artista: Architects</li>
+                                <li>Año: 2025</li>
+                                <li>Género: Metal</li>
+                            </ul>
+                            <h4>Canciones</h4>
+                            <ul class="canciones">
+                                <li>Elegy</li>
+                                <li>Whiplash</li>
+                                <li>Blackhole</li>
+                                <li>Everything Ends</li>
+                                <li>Brain Dead</li>
+                                <li>Evil Eyes</li>
+                                <li>Landmines</li>
+                                <li>Judgement Day</li>
+                                <li>Broken Mirror</li>
+                                <li>Curse</li>
+                                <li>Seeing Red</li>
+                                <li>Chandelier</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Es el undécimo disco de estudio de la banda británica de metalcore Architects.</p>
+                                <p>Es un álbum variado y moderno que mezcla la fuerza de su sonido clásico con ideas
+                                    nuevas y experimentales.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=uuP9s6hyJC0&list=RDuuP9s6hyJC0&start_radio=1"
+                                target="_blank"><i class="fa-solid fa-volume"></i> Escúchalo</a>
+                        </article>
+                        <article id="novelists">
+                            <h3>CODA</h3>
+                            <img src="imgs/discos/novelists.jpg" alt="Portada de CODA">
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Artista: Novelists</li>
+                                <li>Año: 2025</li>
+                                <li>Género: Metal</li>
+                            </ul>
+                            <h4>Canciones</h4>
+                            <ul class="canciones">
+                                <li>Say My Name</li>
+                                <li>Coda</li>
+                                <li>All For Nothing</li>
+                                <li>Maldición de la Bruja</li>
+                                <li>In Heaven</li>
+                                <li>Adam and Eve</li>
+                                <li>Sleepless Nights</li>
+                                <li>78 rue...</li>
+                                <li>CRC</li>
+                                <li>K.O.</li>
+                            </ul>
+                            <h4>Comentario</h4>
+                            <div class="comentarios">
+                                <p>Es el álbum de la banda francesa de metalcore Novelists, lanzado en 2025.</p>
+                                <p>Destaca por la consolidación de su nueva vocalista Camille Contreras, la mezcla
+                                    fresca de metal moderno con electrónica y una gran versatilidad vocal.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=fZ-t_sK19jQ&list=PLwQouV8DCLk4QlaiBiKQtGsnkCFdDaYXJ"
+                                target="_blank"><i class="fa-solid fa-volume"></i> Escúchalo</a>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <div class="divisor"></div>
+            <footer>
+                <p>Contacto: isma.rs1220@gmail.com</p>
+                <ul>
+                    <li><a href="https://i.pinimg.com/originals/2a/97/20/2a972054847bc3f0412083ac13871873.gif"
+                            target="_blank">Privacidad</a></li>
+                    <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLH1w2yPHIqXSCAJpKQXMcVyOv2pHtEkdQ2xjZLeH14DNVmqESwIsExRE&s=10"
+                            target="_blank">Uso Legal</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+
+</html>

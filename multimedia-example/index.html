@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Mi Biblioteca</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/27879825a4.js" crossorigin="anonymous"></script>
+    <style>
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        section article a {
+            text-decoration: none;
+            width: 550px;
+            height: 400px;
+            display: block;
+            font-weight: bold;
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            margin: 1rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            text-shadow: 4px 4px 5px rgba(0, 0, 0, .75);
+            transition: all 0.2s ease;
+        }
+
+        section article a:hover {
+            transform: scale(1.05);
+            color: var(--color-4);
+        }
+
+        section article a:active {
+            transform: scale(1);
+        }
+
+        #musica {
+            background: url(imgs/musica.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #peliculas {
+            background: url(imgs/cine.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #juegos {
+            background: url(imgs/juegos.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <img src="imgs/foto_principal.gif" alt="Icon">
+            <div class="titulo">
+                <h1>MI BIBLIOTECA</h1>
+                <h2>INICIO</h2>
+            </div>
+        </header>
+        <main>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                    <li><a href="peliculas.html"><i class="fa-solid fa-clapperboard"></i> PELÍCULAS</a></li>
+                    <li><a href="juegos.html"><i class="fa-solid fa-gamepad"></i> JUEGOS</a></li>
+                    <li><a href="musica.html"><i class="fa-solid fa-music"></i> DISCOS</a></li>
+                </ul>
+            </nav>
+            <div id="cuerpo">
+                <h2>Menú Principal</h2>
+                <section id="enlaces">
+                    <article>
+                        <a href="peliculas.html" id="peliculas">Películas</a>
+                    </article>
+                    <article>
+                        <a href="juegos.html" id="juegos">Juegos</a>
+                    </article>
+                    <article>
+                        <a href="musica.html" id="musica">Discos</a>
+                    </article>
+                </section>
+            </div>
+        </main>
+        <div class="divisor"></div>
+        <footer>
+            <p>Contacto: isma.rs1220@gmail.com</p>
+            <ul>
+                <li><a href="https://i.pinimg.com/originals/2a/97/20/2a972054847bc3f0412083ac13871873.gif" target="_blank">Privacidad</a></li>
+                <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLH1w2yPHIqXSCAJpKQXMcVyOv2pHtEkdQ2xjZLeH14DNVmqESwIsExRE&s=10" target="_blank">Uso Legal</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

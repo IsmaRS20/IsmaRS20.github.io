@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 - Películas</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://kit.fontawesome.com/27879825a4.js" crossorigin="anonymous"></script>
+    <style>
+        article {
+            margin: 1rem;
+            text-align: center;
+            background-color: var(--color-nav);
+            width: 400px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        article:hover {
+            transform: scale(1.05);
+        }
+
+        article h3 {
+            background-color: var(--color-1);
+            border-radius: 10px 10px 0 0;
+            padding: 2rem;
+            font-size: 2rem;
+            height: 200px;
+        }
+
+        article ul {
+            list-style: none;
+        }
+
+        .marco {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        #alien img {
+            width: 100%;
+            margin-top: -30px;
+        }
+
+        #proyecto img {
+            width: 100%;
+            margin-top: -130px;
+        }
+
+        #interestelar img {
+            width: 100%;
+            margin-top: -150px;
+        }
+
+        #lotr img {
+            width: 100%;
+            margin-top: -110px;
+        }
+
+        .datos {
+            padding: 1rem;
+        }
+
+        .comentarios {
+            height: 200px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="contenedor">
+            <header>
+                <img src="imgs/foto_principal.gif" alt="Icon">
+                <div class="titulo">
+                    <h1>MI BIBLIOTECA</h1>
+                    <h2>PELÍCULAS</h2>
+                </div>
+            </header>
+            <main>
+                <nav class="navegacion">
+                    <ul>
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                        <li><a href="#"><i class="fa-solid fa-clapperboard"></i> PELÍCULAS</a></li>
+                        <li><a href="juegos.html"><i class="fa-solid fa-gamepad"></i> JUEGOS</a></li>
+                        <li><a href="musica.html"><i class="fa-solid fa-music"></i> DISCOS</a></li>
+                    </ul>
+                </nav>
+                <div id="cuerpo">
+                    <h2>Mis Películas Favoritas</h2>
+                    <section class="bloques">
+                        <article id="alien">
+                            <h3>Alien</h3>
+                            <div class="marco"><img src="imgs/peliculas/alien.jpg" alt="Portada de Alien"></div>
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Director: Ridley Scott</li>
+                                <li>Año: 1979</li>
+                                <li>Género: Terror, Ciencia Ficción</li>
+                            </ul>
+                            <h4>Sinopsis</h4>
+                            <div class="comentarios">
+                                <p>La tripulación de la nave de carga Nostromo es desviada por su ordenador central para
+                                    investigar una misteriosa señal de auxilio en un planeta desolado.</p>
+                                <p>Allí, un parásito alienígena se adhiere al rostro de un tripulante. Tras llevarlo a
+                                    bordo, una letal
+                                    criatura emerge, acechando y cazando a los miembros de la tripulación uno a uno.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=Eu9ZFTXXEiw" target="_blank"><i
+                                    class="fa-solid fa-circle-play"></i> Ver Tráiler</a>
+                        </article>
+                        <article id="proyecto">
+                            <h3>Proyecto: Salvación</h3>
+                            <div class="marco"><img src="imgs/peliculas/project.jpg"
+                                    alt="Portada de Proyecto: Salación"></div>
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Directores: Phil Lord, Chris Miller</li>
+                                <li>Año: 2026</li>
+                                <li>Género: Ciencia Ficción</li>
+                            </ul>
+                            <h4>Sinopsis</h4>
+                            <div class="comentarios">
+                                <p>Ryland Grace es un profesor de ciencias que despierta sin memoria en una nave
+                                    espacial a años luz de la Tierra.</p>
+                                <p>A medida que recuerda su pasado, descubre que debe salvar a la humanidad de una
+                                    misteriosa infección solar que está apagando el Sol.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=in-lUuKi0eE" target="_blank"><i
+                                    class="fa-solid fa-circle-play"></i> Ver Tráiler</a>
+                        </article>
+                        <article id="interestelar">
+                            <h3>Interestelar</h3>
+                            <div class="marco"><img src="imgs/peliculas/interestelar.jpg" alt="Portada de Interestelar">
+                            </div>
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Director: Christopher Nolan</li>
+                                <li>Año: 2014</li>
+                                <li>Género: Drama, Ciencia Ficción</li>
+                            </ul>
+                            <h4>Sinopsis</h4>
+                            <div class="comentarios">
+                                <p>La Tierra se está volviendo inhabitable por plagas de polvo que destruyen las
+                                    cosechas, por lo que un grupo de astronautas van en busca de nuevo hogar para la
+                                    humanidad.</p>
+                                <p>Cruzando un agujero de gusano situado cerca de la órbita de Saturno, llegan a un
+                                    sistema lejano con un Agujero Negro en su centro, y varios planetas hostiles que
+                                    dificultan su misión.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=UoSSbmD9vqc" target="_blank"><i
+                                    class="fa-solid fa-circle-play"></i> Ver Tráiler</a>
+                        </article>
+                        <article id="lotr">
+                            <h3>El Señor de los Anillos: La Comunidad del Anillo</h3>
+                            <div class="marco"><img src="imgs/peliculas/lotr.jpg"
+                                    alt="Portada de El Señor de los Anillos: La Comunidad del nillo"></div>
+                            <h4>Ficha técnica</h4>
+                            <ul class="datos">
+                                <li>Director: Peter Jackson</li>
+                                <li>Año: 2001</li>
+                                <li>Género: Fantasía</li>
+                            </ul>
+                            <h4>Sinopsis</h4>
+                            <div class="comentarios">
+                                <p>La historia trata sobre el joven hobbit Frodo Bolsón, quien recibe un poderoso anillo
+                                    y debe viajar con ocho compañeros para destruirlo.</p>
+                                <p>El grupo incluye a magos, hombres, elfos y enanos que cruzan la Tierra Media para
+                                    frenar al Señor Oscuro Sauron.</p>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=iFOucwxKRFE" target="_blank"><i
+                                    class="fa-solid fa-circle-play"></i> Ver Tráiler</a>
+                        </article>
+                    </section>
+                </div>
+            </main>
+            <div class="divisor"></div>
+            <footer>
+                <p>Contacto: isma.rs1220@gmail.com</p>
+                <ul>
+                    <li><a href="https://i.pinimg.com/originals/2a/97/20/2a972054847bc3f0412083ac13871873.gif"
+                            target="_blank">Privacidad</a></li>
+                    <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTLH1w2yPHIqXSCAJpKQXMcVyOv2pHtEkdQ2xjZLeH14DNVmqESwIsExRE&s=10"
+                            target="_blank">Uso Legal</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+
+</html>
