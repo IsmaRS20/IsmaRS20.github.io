@@ -28,7 +28,7 @@
             --primary-color: #0b1d33;
             --secondary-color: #1a365d;
             --h-color: #90cdf4;
-            --card-color: #1e293b;
+            --card-color: #142033;
             --txt-color-light: #e2e8f0;
             --txt-color-dark: #cbd5e1;
             --bg-color: #0f172a;
@@ -70,7 +70,7 @@
         .header {
             text-align: center;
         }
-        
+
         .header h1 {
             font-size: 3.5rem;
             color: var(--txt-color-light);
@@ -78,7 +78,7 @@
             padding: 30px 0;
             transition: background-color 0.3s ease;
         }
-        
+
         .header h2 {
             font-size: 2rem;
             color: var(--txt-color-light);
@@ -86,7 +86,7 @@
             padding-top: 20px;
             transition: background-color 0.3s ease;
         }
-        
+
         .header p {
             font-size: 1.25rem;
             color: var(--txt-color-light);
@@ -96,16 +96,16 @@
             padding-bottom: 20px;
             transition: background-color 0.3s ease;
         }
-        
+
         .main {
             background-color: var(--bg-color);
             transition: background-color 0.3s ease;
         }
-        
+
         section {
             padding: 20px 20px;
         }
-        
+
         .main h2 {
             font-size: 2rem;
             color: var(--h-color);
@@ -119,36 +119,53 @@
             margin-left: 1rem;
             margin-bottom: 20px;
         }
-        
+
         .main h3 {
             font-size: 1.5rem;
             color: var(--h-color);
-            margin-bottom: 10px;
             transition: color 0.3s ease;
         }
-        
+
         .main p {
             color: var(--txt-color-dark);
             transition: color 0.3s ease;
         }
-        
+
         .skills-dl {
             display: flex;
             justify-content: center;
             gap: 2%;
             margin-bottom: 40px;
         }
-        
+
         .sk-html,
         .sk-css,
         .sk-js {
             width: 33%;
         }
 
+        .sk-html dt,
+        .sk-html dd {
+            border-left: 4px solid orangered;
+            border-radius: 10px;
+        }
+
+        .sk-css dt,
+        .sk-css dd {
+            border-left: 4px solid rgb(180, 96, 219);
+            border-radius: 10px;
+        }
+
+                .sk-js dt,
+        .sk-js dd {
+            border-left: 4px solid rgb(252, 214, 0);
+            border-radius: 10px;
+        }
+
         .skills-dl dt {
             font-weight: bold;
             color: var(--txt-color-light);
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             text-align: center;
             padding: 1rem;
             background-color: var(--secondary-color);
@@ -170,19 +187,30 @@
             font-size: 1.5rem;
             color: var(--h-color);
             text-align: center;
-            margin-bottom: 10px;
+            padding: 10px;
             transition: color 0.3s ease;
+            background-color: var(--secondary-color);
+            border-radius: 10px 10px 0 0;
+            color: var(--txt-color-light);
         }
 
         .project-boxes p {
             text-align: center;
+            padding: 1rem;
+        }
+
+        .card-content {
+            background-color: var(--card-color);
+            margin-top: 0;
+            border-radius: 0 0 10px 10px;
         }
 
         .project-links {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 10px;
+            margin: 0 10px;
+            padding: 10px;
         }
 
         .project-hangman {
@@ -211,7 +239,7 @@
             transition: background-color 0.3s ease;
         }
 
-        @media (min-width: 900px) {
+        @media (min-width: 1550px) {
             .main {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -237,7 +265,7 @@
             }
 
             .projects {
-                grid-column: 3 / 4;
+                grid-column: 2 / 4;
             }
 
             .footer {
@@ -267,41 +295,6 @@
                     CSS, con conocimientos iniciales de JavaScript. Busco expandir mis conocimientos sobre estos
                     lenguajes para dedicarme a la profesión en el futuro.</p>
             </section>
-            <section class="curriculum">
-                <div class="formation">
-                    <h3>Formación</h3>
-                    <ul>
-                        <li><strong>Escola d'Adults Alfafar</strong> <em>GES</em> (ESO)</li>
-                        <li><strong>Labora Picanya</strong> <em>Confección y Publicación de Páginas Web</em> (Curso Profesionalidad Nv. 2)</li>
-                    </ul>
-                </div>
-                <div class="experience">
-                    <h3>Experiencia</h3>
-                    <ul>
-                        <li><strong>Autotrim, Almussafes</strong> <em>Operario</em>
-                            <p>Mayo 2019 - Julio 2019</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="lenguages">
-                    <h3>Idiomas</h3>
-                    <ul>
-                        <li><strong>Castellano</strong> - Nativo</li>
-                        <li><strong>Valenciano</strong> - Nativo</li>
-                        <li><strong>Inglés</strong> - Nativo</li>
-                    </ul>
-                </div>
-                <div class="work-skills">
-                    <h3>Aptitudes</h3>
-                    <ul>
-                        <li>Alta capacidad para el trabajo en equipo.</li>
-                        <li>Resolución de problemas e imprevistos.</li>
-                        <li>Capacidad de gestión del tiempo.</li>
-                        <li>Capacidad de trabajo en momentos o entornos de estrés.</li>
-                        <li>Atención al detalle.</li>
-                    </ul>
-                </div>
-            </section>
             <section class="skills">
                 <h2>Habilidades de Desarrollo Web</h2>
                 <dl class="skills-dl">
@@ -325,21 +318,28 @@
                 <div class="project-boxes">
                     <div class="project-hangman">
                         <h3>Juego de Ahorcado</h3>
-                        <p>Un ejercicio básico de adivinanza de palabras, con animaciones básicas y funcionalidad
-                            completa.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/IsmaRS20/Portfolio/tree/main/hangman-example" target="_blank">Código GitHub</a>
-                            <a href=".\hangman-example\index.html" target="_blank">Pruébalo</a>
+                        <div class="card-content">
+                            <p>Un ejercicio básico de adivinanza de palabras, con animaciones básicas y funcionalidad
+                                completa.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/IsmaRS20/Portfolio/tree/main/hangman-example"
+                                    target="_blank">Código GitHub</a>
+                                <a href=".\hangman-example\index.html" target="_blank">Pruébalo</a>
+                            </div>
                         </div>
                     </div>
                     <div class="project-website">
                         <h3>Página Web Completa</h3>
-                        <p>El resultado de un exámen realizado en 4h que requería la realización de una página Web que
-                            tuviera información de un centro formativo.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/IsmaRS20/Portfolio/tree/main/finished-web-example" target="_blank">Código GitHub</a>
-                            <a href=".\finished-web-example\index.html" target="_blank">Ver Página</a>
+                        <div class="card-content">
+                            <p>El resultado de un exámen realizado en 4h que requería la realización de una página Web
+                                que
+                                tuviera información de un centro formativo.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/IsmaRS20/Portfolio/tree/main/finished-web-example"
+                                    target="_blank">Código GitHub</a>
+                                <a href=".\finished-web-example\index.html" target="_blank">Ver Página</a>
+                            </div>
                         </div>
                     </div>
                 </div>
