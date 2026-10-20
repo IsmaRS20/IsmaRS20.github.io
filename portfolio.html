@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ismael Rodríguez Sayavera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'segoe ui', arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #133b68;
+            --secondary-color: #3066a3;
+            --h-color: #2a4a6e;
+            --card-color: #a9c1dd;
+            --txt-color-light: #ffffff;
+            --txt-color-dark: #131313;
+            --bg-color: #f0f0f0;
+        }
+
+        
+        .header {
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            color: var(--txt-color-light);
+            background-color: var(--primary-color);
+            padding: 30px 0;
+        }
+        
+        .header h2 {
+            font-size: 2rem;
+            color: var(--txt-color-light);
+            background-color: var(--secondary-color);
+            padding-top: 20px;
+        }
+        
+        .header p {
+            font-size: 1.25rem;
+            color: var(--txt-color-light);
+            font-weight: bold;
+            background-color: var(--secondary-color);
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        
+        .main {
+            background-color: var(--bg-color);
+        }
+        
+        section {
+            padding: 20px 20px;
+        }
+        
+        .main h2 {
+            font-size: 2rem;
+            color: var(--h-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: square;
+            margin-left: 1rem;
+            margin-bottom: 20px;
+        }
+        
+        .main h3 {
+            font-size: 1.5rem;
+            color: var(--h-color);
+            margin-bottom: 10px;
+        }
+        
+        .main p {
+            color: var(--txt-color-dark);
+        }
+        
+        .skills-dl {
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+            margin-bottom: 40px;
+        }
+        
+        .sk-html,
+        .sk-css,
+        .sk-js {
+            width: 33%;
+        }
+
+        .skills-dl dt {
+            font-weight: bold;
+            color: var(--txt-color-light);
+            font-size: 1.25rem;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .skills-dl dd {
+            color: var(--txt-color-dark);
+            padding-bottom: 10px;
+            text-align: justify;
+            padding: 1rem;
+            background-color: var(--card-color);
+            border-radius: 0 0 10px 10px;
+            height: 90%;
+        }
+
+        .project-boxes h3 {
+            font-size: 1.5rem;
+            color: var(--h-color);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .project-boxes p {
+            text-align: center;
+        }
+
+        .project-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .project-hangman {
+            margin-bottom: 20px;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            background-color: var(--secondary-color);
+            padding: 10px;
+            color: var(--txt-color-light);
+            border-radius: 10px;
+            display: block;
+            transition: all .25s ease;
+        }
+
+        .project-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .footer p {
+            text-align: center;
+            padding: 20px 0;
+            background-color: var(--secondary-color);
+            color: var(--txt-color-light);
+        }
+
+        @media (min-width: 900px) {
+            .main {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .about-me {
+                grid-column: 1 / 4;
+            }
+
+            .about-me p {
+                text-align: center;
+            }
+
+            .skills-dl {
+                display: initial;
+            }
+
+            .sk-html,
+            .sk-css,
+            .sk-js {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .projects {
+                grid-column: 3 / 4;
+            }
+
+            .project-boxes {
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Ismael Rodríguez Sayavera</h1>
+            <h2>Estudiante Desarrollo Web</h2>
+            <p>HTML, CSS & JavaScript</p>
+        </header>
+        <main class="main">
+            <section class="about-me">
+                <h2>Sobre mí</h2>
+                <p>Actualmente estoy cursando en desarrollo frontend de páginas web. Tengo una base sólida de HTML y
+                    CSS, con conocimientos iniciales de JavaScript. Busco expandir mis conocimientos sobre estos
+                    lenguajes para dedicarme a la profesión en el futuro.</p>
+            </section>
+            <section class="curriculum">
+                <div class="formation">
+                    <h3>Formación</h3>
+                    <ul>
+                        <li><strong>Escola d'Adults Alfafar</strong> - <em>GES</em> (ESO)</li>
+                        <li><strong>Labora Picanya</strong> - <em>Confección y Publicación de Páginas Web</em> (Curso Profesionalidad Nv. 2)</li>
+                    </ul>
+                </div>
+                <div class="experience">
+                    <h3>Experiencia</h3>
+                    <ul>
+                        <li><strong>Autotrim, Almussafes</strong> - <em>Operario</em></li>
+                        <p>Mayo 2019 - Julio 2019</p>
+                    </ul>
+                </div>
+                <div class="lenguages">
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li><strong>Castellano</strong> - Nativo</li>
+                        <li><strong>Valenciano</strong> - Nativo</li>
+                        <li><strong>Inglés</strong> - Nativo</li>
+                    </ul>
+                </div>
+                <div class="work-skills">
+                    <h3>Aptitudes</h3>
+                    <ul>
+                        <li>Alta capacidad para el trabajo en equipo.</li>
+                        <li>Resolución de problemas e imprevistos.</li>
+                        <li>Capacidad de gestión del tiempo.</li>
+                        <li>Capacidad de trabajo en momentos o entornos de estrés.</li>
+                        <li>Atención al detalle.</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="skills">
+                <h2>Habilidades de Desarrollo Web</h2>
+                <dl class="skills-dl">
+                    <div class="sk-html">
+                        <dt>HTML</dt>
+                        <dd>Capacidad de creación de código HTML preparado para todo tipo de páginas Web.</dd>
+                    </div>
+                    <div class="sk-css">
+                        <dt>CSS</dt>
+                        <dd>Dominio de diseño responsive y animaciones básicas para crear efectos interactivos.</dd>
+                    </div>
+                    <div class="sk-js">
+                        <dt>JavaScript</dt>
+                        <dd>Conocimiento básico para crear las funciones necesarias para el funcionamiento de la página.
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="projects">
+                <h2>Proyectos realizados destacados</h2>
+                <div class="project-boxes">
+                    <div class="project-hangman">
+                        <h3>Juego de Ahorcado</h3>
+                        <p>Un ejercicio básico de adivinanza de palabras, con animaciones básicas y funcionalidad
+                            completa.
+                        </p>
+                        <div class="project-links">
+                            <a href="" target="_blank">Código GitHub</a>
+                            <a href="" target="_blank">Pruébalo</a>
+                        </div>
+                    </div>
+                    <div class="project-website">
+                        <h3>Página Web Completa</h3>
+                        <p>El resultado de un exámen realizado en 4h que requería la realización de una página Web que
+                            tuviera información de un centro formativo.</p>
+                        <div class="project-links">
+                            <a href="" target="_blank">Código GitHub</a>
+                            <a href="" target="_blank">Ver Página</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

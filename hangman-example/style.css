@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #142641;
+    --secondary: #00000050;
+    --accent: #ffffff50;
+    --primary-font: #e7f1f3;
+    --danger: #990000;
+    --danger-bg: #250000;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--primary-font);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    height: 100vh;
+}
+
+@keyframes pulseBorder {
+    0% {
+        box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.0);
+        border-color: rgba(255, 0, 0, 0.0);
+    }
+    50% {
+        box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.9);
+        border-color: rgba(255, 0, 0, 0.9);
+    }
+    100% {
+        box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.0);
+        border-color: rgba(255, 0, 0, 0.0);
+    }
+}
+
+.danger-zone {
+    border: 0px solid red;
+    animation: pulseBorder 2s infinite ease-in-out;
+}
+
+.victory-background {
+    background-color: #14411a;
+}
+
+.name_menu,
+.phrase_menu {
+    font-size: 1.5rem;
+}
+
+.name_menu input,
+.phrase_menu input,
+.char_input input {
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    color: var(--primary-font);
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.char_input input {
+    width: 40px;
+    text-transform: capitalize;
+}
+
+.char_case {
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    color: var(--primary-font);
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: .25rem;
+    text-align: center;
+    min-width: 40px;
+}
+
+.name_menu div,
+.phrase_menu div {
+    margin: 2rem;
+}
+
+#phrase_display {
+    font-size: 1.5rem;
+    padding: 5rem 1rem;
+}
+
+.phrase_menu,
+.game_screen {
+    display: none;
+}
+
+button {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--accent);
+    border: 1px solid var(--primary-font);
+    color: var(--primary-font);
+    transition: .25s all ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--secondary);
+    border-color: var(--accent);
+}
+
+.game_screen {
+    padding: 1rem;
+}
+
+.game_screen h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.game_screen p {
+    font-size: 1.25rem;
+}
+
+.game_screen .hud_display {
+    margin: 2rem 0;
+}
+
+#wrong_char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.wrong_char_case {
+    background-color: var(--danger-bg);
+    border: 1px solid var(--danger);
+    border-radius: 10px;
+    color: var(--primary-font);
+    font-size: 1.5rem;
+    padding: .5rem;
+    margin: .25rem;
+    text-align: center;
+    min-width: 40px;
+    text-transform: capitalize;
+}

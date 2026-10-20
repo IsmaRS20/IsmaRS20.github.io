@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15 - Palabra Oculta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <div class="name_menu">
+                <div>
+                    <label for="in_name_a">Introduce el nombre del jugador que adivina:</label><br>
+                    <input type="text" name="in_name_a" id="in_name_a">
+                </div>
+                <div>
+                    <label for="in_name_b">Introduce el nombre del jugador que oculta:</label><br>
+                    <input type="text" name="in_name_b" id="in_name_b">
+                </div>
+                <button id="btn_names">Confirmar</button>
+            </div>
+            <div class="phrase_menu">
+                <div>
+                    <label for="in_phrase">Introduce una frase a ocultar:</label><br>
+                    <input type="password" name="in_phrase" id="in_phrase">
+                </div>
+                <button id="btn_phrase">Confirmar</button>
+            </div>
+            <div class="game_screen">
+                <h2>¡Has sido condenado/a a la horca!</h2>
+                <p class="fun_phrase"><span id="out_name_b"></span> te ha condenado a la horca. <span
+                        id="out_name_a"></span>, debes adivinar la palabra o frase oculta para librarte de la condena.
+                    ¡Buena suerte!</p>
+                <div class="hud_display">
+                    <p>Letras totales: <span id="total_char"></span></p>
+                    <p>Letras acertadas: <span id="correct_char"></span></p>
+                    <p>Vidas: <span id="lives_display"></span></p>
+                </div>
+                <div id="phrase_display"></div>
+                <div class="char_input">
+                    <label for="in_char">¿Con qué letra quieres probar?</label>
+                    <input type="text" name="in_char" id="in_char" maxlength="1">
+                    <button id="btn_char">Probar</button>
+                    <p>Letras falladas: <span id="wrong_char"></span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
