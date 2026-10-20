@@ -107,7 +107,7 @@ h2 {
     display: block;
     text-decoration: none;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: var(--color-0);
     background-color: var(--color-3);
     padding: 1rem;
@@ -125,7 +125,7 @@ h2 {
     background-color: var(--color-4);
     text-decoration: none;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 1rem;
     color: var(--color-0);
     padding: 0.75rem;
     border-left: 1px solid var(--color-text);
