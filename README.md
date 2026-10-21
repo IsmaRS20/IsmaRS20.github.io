@@ -1,47 +1,47 @@
 # IsmaRS20.github.io
 
-This repository hosts the personal GitHub Pages website for IsmaRS20, built as a static front-end project using HTML, CSS, and JavaScript.
+Este repositorio alberga el sitio web personal de GitHub Pages de IsmaRS20, construido como un proyecto front-end estático usando HTML, CSS y JavaScript.
 
-## Overview
+## Descripción general
 
-The site includes a main landing page (`index.html`) and several demo/example projects that showcase different web development concepts and interactive browser experiences:
+El sitio incluye una página principal (`index.html`) y varios proyectos de demostración/ejemplo que muestran diferentes conceptos de desarrollo web y experiencias interactivas en el navegador:
 
-- `calendar-example` – a calendar-related example
-- `finished-web-example` – a more complete web example
-- `hangman-example` – a browser game example
-- `multimedia-example` – a multimedia-focused example
+- `calendar-example` – un ejemplo relacionado con un calendario
+- `finished-web-example` – un ejemplo web más completo
+- `hangman-example` – un ejemplo de juego en el navegador
+- `multimedia-example` – un ejemplo centrado en multimedia
 
-## Technology
+## Tecnología
 
-The repository primarily uses:
+El repositorio utiliza principalmente:
 
 - HTML
 - CSS
 - JavaScript
 
-Based on the current language composition, the project is mainly composed of HTML with supporting CSS and JavaScript.
+Según la composición actual de lenguajes, el proyecto está compuesto principalmente por HTML, con CSS y JavaScript como apoyo.
 
-## Live Website
+## Sitio web en vivo
 
-The site is published via GitHub Pages:
+El sitio se publica mediante GitHub Pages:
 
 - https://ismars20.github.io/
 
-## Local Preview
+## Vista previa local
 
-To view the site locally:
+Para ver el sitio localmente:
 
-1. Clone the repository
-2. Open `index.html` in a browser, or serve the folder locally
-3. For a simple local server:
+1. Clona el repositorio
+2. Abre `index.html` en un navegador, o sirve la carpeta localmente
+3. Para un servidor local simple:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Luego abre `http://localhost:8000` en tu navegador.
 
-## Repository Structure
+## Estructura del repositorio
 
 ```text
 .
