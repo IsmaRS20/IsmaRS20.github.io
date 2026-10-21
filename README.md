@@ -52,7 +52,3 @@ Then open `http://localhost:8000` in your browser.
 ├── multimedia-example/
 └── README.md
 ```
-
-## Notes
-
-This is a static website repository intended for front-end learning, experimentation, and personal portfolio/content hosting.
